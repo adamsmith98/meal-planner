@@ -1,0 +1,12 @@
+{
+  "type": "postgres",
+  "host": "localhost",
+  "username": "postgres",
+  "password": "postgres",
+  "database": "cooking-app",
+  "entities": ["./dist/entities/*.js"],
+  "migrations": ["./dist/migrations/*.js"],
+  "cli": {
+    "migrationsDir": "./src/migrations"
+  }
+}

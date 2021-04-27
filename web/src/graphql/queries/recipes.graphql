@@ -1,0 +1,14 @@
+query Recipes {
+  recipes {
+    id
+    name
+    cuisine
+    price
+    ingredients
+    cookingTime
+    creator {
+      id
+      username
+    }
+  }
+}
