@@ -21,24 +21,26 @@ export const NavBar: React.FC = () => {
       w="100%"
       zIndex={1}
       height="80px"
-      bgColor="black"
+      bgColor="orange.50"
+      borderBottom="1px"
+      borderColor="orange"
       alignItems="center"
     >
       <Flex w="950px" m="auto">
-        <Box mr="auto" pl={4} fontSize="18pt" textColor="white">
+        <Box mr="auto" pl={4} fontSize="18pt" textColor="black">
           <NextLink href="/">
             <Link>MealPlanner</Link>
           </NextLink>
         </Box>
         {data?.me ? (
           <Flex ml="auto" alignItems="center">
-            <Box mr={4} textColor="white">
+            <Box mr={4} textColor="black">
               {data.me.username}
             </Box>
             <Button
               mr={4}
               variant="link"
-              textColor="white"
+              textColor="black"
               fontWeight={1}
               onClick={async () => {
                 try {
@@ -51,24 +53,24 @@ export const NavBar: React.FC = () => {
                 }
               }}
             >
-              logout
+              Logout
             </Button>
             <NextLink href="/basket">
               <Button>
                 <FiShoppingBag />
-                <Box pl={1}>basket</Box>
+                <Box pl={1}>Basket</Box>
               </Button>
             </NextLink>
           </Flex>
         ) : (
           <Flex alignItems="center">
             <NextLink href="/login">
-              <Link mr={4} textColor="white">
-                login
+              <Link mr={4} textColor="black">
+                Login
               </Link>
             </NextLink>
             <NextLink href="/register">
-              <Link textColor="white">register</Link>
+              <Link textColor="black">Register</Link>
             </NextLink>
           </Flex>
         )}
